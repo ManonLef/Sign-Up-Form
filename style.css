@@ -1,18 +1,21 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url(./assets/mak-RlxP6WGmfP0-unsplash.jpg);
 }
 
 .content {
-  display: flex;
-  height: 100vh;
+  display: flex;  
 }
 
 .left {
-  flex: 1 1 auto;
+  flex: 2 1 auto;
+  background-image: url(./assets/florian-klauer-mk7D-4UCfmg-unsplash.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 .right {
-  flex: 2 1 auto;
+  flex: 3 1 auto;
   background-color: rgb(255, 255, 255);
 }
