@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+
+  --color1: 49, 133, 112;
+  --color2: 153, 50, 204;
 }
 
 body {
@@ -11,6 +14,15 @@ body {
   display: flex;
   flex-wrap: wrap;
   height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(var(--color1));
+}
+
+a:hover {
+  color: rgba(var(--color2));
 }
 
 /* Left side of the page */
@@ -31,7 +43,7 @@ body {
 }
 
 .logo-banner {
-  background-color: rgba(49, 133, 112, 0.6);
+  background-color: rgba(var(--color1), 0.8);
   width: 100%;
   color: aliceblue;
   text-align: center;
@@ -62,7 +74,7 @@ body {
 .top {
   flex: 1 1 0;
   border: 1px solid red;
-  padding: 1em;
+  padding: 2em;
   width: 60%;
 
   display: flex;
