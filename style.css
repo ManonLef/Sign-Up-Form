@@ -63,37 +63,66 @@ a:hover {
 
 .right-side {
   min-width: 60vw;
-  color: white;
   flex: 3 1 0;
-  background-color: rgb(202, 202, 202);
+  background-color: rgb(255, 255, 255);
 
   display: flex;
   flex-direction: column;
+
+  font-size: 20px;
+  color: rgb(117, 117, 117);
 }
 
 .top {
   flex: 1 1 0;
-  border: 1px solid red;
   padding: 2em;
-  width: 60%;
 
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   gap: 1em;
-
-  font-size: 20px;
 }
 
 .middle {
   flex: 1 1 0;
-  border: 1px solid red;
-
+  padding: 2em;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1em;
+
+  background-color: rgba(var(--color1), .1);
+  color: rgba(var(--color1));
 }
 
 .bottom {
   flex: 1 1 0;
-  border: 1px solid red;
+  padding: 2em;
+
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.first-name,
+.last-name,
+.email,
+.phone,
+.password,
+.confirm-pw {
+  min-width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+label {
+  font-size: smaller;
+}
+
+input {
+  width: 25em;
+  height: 2em;
 }
