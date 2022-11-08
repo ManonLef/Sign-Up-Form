@@ -8,7 +8,7 @@
 }
 
 .left-side {
-  flex: 2 1 auto;
+  flex: 2 1 0;
   background-image: url(./assets/florian-klauer-mk7D-4UCfmg-unsplash.jpg);
   height: 100vh;
 
@@ -22,14 +22,17 @@
 }
 .right-side {
   flex: 3 1 auto;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(47, 47, 47);
 }
 
 .logo-banner {
   background-color: rgba(49, 133, 112, 0.6);
+
   color: aliceblue;
   text-align: center;
+  margin-top: -30vh;
   padding: 100px 0px;
+
   font-size: xx-large;
   font-weight: 900;  
 }
