@@ -5,12 +5,15 @@
 
 .page-content {
   display: flex;  
+  flex-wrap: wrap;
+  height: 100vh;
 }
+
+/* Left side of the page */
 
 .left-side {
   flex: 2 1 0;
   background-image: url(./assets/florian-klauer-mk7D-4UCfmg-unsplash.jpg);
-  height: 100vh;
 
   background-size: cover;
   background-repeat: no-repeat;
@@ -19,10 +22,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around; 
-}
-.right-side {
-  flex: 3 1 auto;
-  background-color: rgb(47, 47, 47);
 }
 
 .logo-banner {
@@ -35,4 +34,33 @@
 
   font-size: xx-large;
   font-weight: 900;  
+}
+
+/* Right side of the page */
+
+.right-side {
+  color: white;
+  flex: 3 1 0;
+  background-color: rgb(202, 202, 202);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+ flex: 1 1 0;
+ border: 1px solid red;
+}
+
+.middle {
+  flex: 1 1 0;
+  border: 1px solid red;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bottom {
+  flex: 1 1 0;
+  border: 1px solid red;
 }
