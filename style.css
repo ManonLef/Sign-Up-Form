@@ -3,7 +3,7 @@
   padding: 0;
 
   --color1: 49, 133, 112;
-  --color2: 153, 50, 204;
+  --color2: 150, 112, 164;
 }
 
 body {
@@ -97,7 +97,6 @@ a:hover {
 .bottom {
   flex: 1 1 0;
   padding: 2em;
-
 }
 
 .signup {
@@ -129,11 +128,18 @@ input {
   height: 2em;
   border: 1px solid rgba(var(--color1),0.2);
   border-radius: 3px;
-  background-color: rgba(var(--color1), 0.1);
   
   color: rgb(36, 36, 36);
   font-size: 14px;
   padding: 0 0.5em;
+  box-shadow: inset 1px 1px 2px #ccc;
+}
+
+input:focus {
+  outline-color: rgba(var(--color1));
+  outline-offset: 1px;
+  outline-style: solid;
+  outline-width: 2px;
 }
 
 button {
@@ -144,4 +150,8 @@ button {
   border: none;
   border-radius: 3px;
   font-size: 16px;
+}
+
+button:hover {
+  background-color: rgba(var(--color2));
 }
