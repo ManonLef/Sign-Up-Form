@@ -8,6 +8,7 @@
 - [ ] Visual indicator invalid entry
 - [ ] JS password check
 - [ ] Edit pop ups for required fields and formats
+- [ ] Look into autocomplete yellow background in safari behavior
  
 ## 2022110601
 - I will start by sketching out the different sections on top of the [project example file](./PROJECT-EXAMPLE-sign-up-form.png) in ProCreate on my iPad. I already noticed some design alterations I would like to make and might sketch those in as well.
