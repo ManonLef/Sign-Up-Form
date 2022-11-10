@@ -122,6 +122,10 @@ a:hover {
   gap: 0.3em;
 }
 
+label {
+  margin-left: 2px;
+}
+
 input {
   min-width: 20em;
   max-width: 100%;
