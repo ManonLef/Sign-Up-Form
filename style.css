@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif, 'Helvetica';
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
 }
 
 .page-content {
@@ -133,7 +133,7 @@ input {
   font-size: 14px;
   padding: 0 0.5em;
   box-shadow: inset 1px 1px 2px #ccc;
-  font-family: 'Montserrat', sans-serif, 'Helvetica';
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
 }
 
 input:focus {
@@ -144,7 +144,7 @@ input:focus {
 }
 
 button {
-  font-family: 'Montserrat', sans-serif, 'Helvetica';
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
   margin-top: 2.5em;
   background-color: rgba(var(--color1));
   color: white;
