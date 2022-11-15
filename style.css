@@ -168,13 +168,9 @@ button:hover {
   background-color: rgba(var(--color2));
 }
 
-input::placeholder {
-  color: rgba(var(--color1), 0.3);
-}
-
 /* Validation  */
 
-.first-name input:focus:invalid {
+input:focus:invalid {
   border-color: var(--color3);
   content: "nope";
 }
