@@ -4,6 +4,7 @@
 
   --color1: 49, 133, 112;
   --color2: 150, 112, 164;
+  --color3: rgb(147, 34, 34); /* error colour */
 }
 
 body {
@@ -60,6 +61,12 @@ a:hover {
 }
 
 /* Right side of the page */
+
+.req-info {
+  color: rgba(var(--color1), 0.5);
+  font-weight: 500;
+  font-size: smaller;
+}
 
 .right-side {
   min-width: 60vw;
@@ -159,4 +166,15 @@ button {
 
 button:hover {
   background-color: rgba(var(--color2));
+}
+
+input::placeholder {
+  color: rgba(var(--color1), 0.3);
+}
+
+/* Validation  */
+
+.first-name input:focus:invalid {
+  border-color: var(--color3);
+  content: "nope";
 }
