@@ -34,11 +34,12 @@
         <div class="signup">
           Let's do this! <span class="req-info">(fields marked with an asterisk * are required)</span>
         </div>
-        <form id="form" action="">
+        <form id="form" action="" novalidate>
           <div class="form-elements">
             <div class="first-name">
               <label for="first-name">FIRST NAME <span>*</span></label>
               <input type="text" name="first-name" id="first-name" required>
+              <span class="error"></span>
             </div>
             <div class="last-name">
               <label for="last-name">LAST NAME</label>
@@ -47,6 +48,7 @@
             <div class="email">
               <label for="email">EMAIL <span>*</span></label>
               <input type="email" name="email" id="email" required>
+              <span class="error"></span>
             </div>
             <div class="phone">
               <label for="phone">PHONE</label>
@@ -55,10 +57,12 @@
             <div class="password">
               <label for="password">PASSWORD <span>*</span></label>
               <input type="password" name="password" id="password" minlength="8" required>
+              <span class="error"></span>
             </div>
             <div class="confirm-pw">
               <label for="confirm-pw">CONFIRM PASSWORD <span>*</span></label>
               <input type="password" name="confirm-pw" id="confirm-pw" required>
+              <span class="error"></span>
             </div>
           </div>
           <button type="submit">Create Account</button>

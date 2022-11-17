@@ -26,7 +26,7 @@ a:hover {
   color: rgba(var(--color2));
 }
 
-/* Left side of the page */
+/* Image side of the page */
 
 .left-side {
   min-width: 40vw;
@@ -60,7 +60,7 @@ a:hover {
   padding: 1em 0px;
 }
 
-/* Right side of the page */
+/* Form side of the page */
 
 .req-info {
   color: rgba(var(--color1), 0.5);
@@ -124,7 +124,8 @@ a:hover {
   gap: 0.3em;
 }
 
-label {
+label,
+span {
   margin-left: 2px;
 }
 
@@ -164,4 +165,16 @@ button:hover {
 }
 
 /* Validation  */
+span.error{
+  font-size: 0.8em;
+  position: relative;
+  color: rgba(var(--color1));
+  margin-top: -0.4em;
+  margin-bottom: -0.4em;
+}
 
+span.error.active {
+  font-size: 0.8rem;
+  position: relative;
+  color: rgb(127, 68, 68);
+}
