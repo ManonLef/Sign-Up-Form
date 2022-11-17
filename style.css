@@ -117,12 +117,7 @@ a:hover {
   font-size: 18px;
 }
 
-.first-name,
-.last-name,
-.email,
-.phone,
-.password,
-.confirm-pw {
+.form-elements > div {
   min-width: 40%;
   display: flex;
   flex-direction: column;
@@ -170,7 +165,3 @@ button:hover {
 
 /* Validation  */
 
-input:focus:invalid {
-  border-color: var(--color3);
-  content: "nope";
-}
