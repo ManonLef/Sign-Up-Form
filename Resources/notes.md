@@ -23,3 +23,6 @@
 ## 2022111001
 - Added styling
 - Switch to Montserrat font https://fonts.google.com/specimen/Montserrat
+
+## 2023010301
+- Opened the project for the first time again after my winter break. Will look into the invalid entry indicators first to finetune since it seems I already sort of got that to work for the name field. 
