@@ -16,13 +16,13 @@ firstName.addEventListener ("input", (event) => {
   } else {
     firstNameError.className = "error active"
     firstNameError.textContent ="this field is required";
-    firstName.className = "fnErr";
+    firstName.className = "name error";
   }
 });
 
 firstName.addEventListener ("focus", (event) => {
   if (!firstName.validity.valid) {
-    firstName.className = "fnErr";
+    firstName.className = "name error";
   }
 });
 
@@ -30,7 +30,6 @@ firstName.addEventListener ("blur", (event) => {
   if (!firstName.validity.valid) {
     firstNameError.className = "error active"
     firstNameError.textContent ="this field is required";
-    firstName.className = "fnErr";
   }
 });
 
