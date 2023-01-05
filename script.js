@@ -9,9 +9,20 @@ const pwdConfirm = document.getElementById ("confirm-pw")
 const pwdConfirmError = document.querySelector ("#confirm-pw + span.error")
 
 firstName.addEventListener ("input", (event) => {
-  if (firstName.validity.valid) {
+  if (firstName.validity.valid && firstName.value.trim() !== "") {
     firstNameError.className = "error" 
     firstNameError.textContent ="awesome";
+    firstName.className = "";
+  } else {
+    firstNameError.className = "error active"
+    firstNameError.textContent ="this field is required";
+    firstName.className = "fnErr";
+  }
+});
+
+firstName.addEventListener ("focus", (event) => {
+  if (!firstName.validity.valid) {
+    firstName.className = "fnErr";
   }
 });
 
@@ -19,6 +30,7 @@ firstName.addEventListener ("blur", (event) => {
   if (!firstName.validity.valid) {
     firstNameError.className = "error active"
     firstNameError.textContent ="this field is required";
+    firstName.className = "fnErr";
   }
 });
 

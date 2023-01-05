@@ -149,6 +149,12 @@ input:focus {
   outline: 2px;
 }
 
+.fnErr:focus {
+  appearance: none;
+  border: 2px solid pink;
+  outline: 2px;
+}
+
 button {
   font-family: 'Montserrat', 'Helvetica', sans-serif;
   margin-top: 2.5em;
