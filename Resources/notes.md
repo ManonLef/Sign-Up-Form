@@ -28,4 +28,7 @@
 - Opened the project for the first time again after my winter break. Will look into the invalid entry indicators first to finetune since it seems I already sort of got that to work for the name field. 
 
 ## 2023010501
-- I'm making a start to add an error color on the required fields today until they're filled out correctly
+- I'm making a start to add an error color on the required fields today until they're filled out correctly.
+- Took some fiddling to validate during input since it also okayed blank spaces. I added a check by trimming and checking if the value wasn't empty after trim. 
+- [ ] consider regex for first name validity check special symbols/characters
+- [ ] check twitter thread on validation best pratices.
