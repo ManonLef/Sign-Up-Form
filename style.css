@@ -151,7 +151,7 @@ input:focus {
 
 .name.error:focus {
   appearance: none;
-  border: 2px solid pink;
+  border: 2px solid var(--color3);
   outline: 2px;
 }
 
@@ -175,8 +175,8 @@ span.error{
   font-size: 0.8rem;
   position: relative;
   color: rgba(var(--color1));
-  margin-top: -0.4em;
-  margin-bottom: -0.4rem;
+  margin-top: -0.2rem;
+  margin-bottom: -0.6rem;
 }
 
 span.error.active {
