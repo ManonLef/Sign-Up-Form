@@ -8,6 +8,15 @@ const pwdError = document.querySelector ("#password + span.error")
 const pwdConfirm = document.getElementById ("confirm-pw")
 const pwdConfirmError = document.querySelector ("#confirm-pw + span.error")
 
+//First Name Validation
+  //when clicked upon
+  firstName.addEventListener ("focus", (event) => {
+    if (!firstName.validity.valid) {
+      firstName.className = "name error";
+    }
+  });
+
+  //during input
 firstName.addEventListener ("input", (event) => {
   if (firstName.validity.valid && firstName.value.trim() !== "") {
     firstNameError.className = "error" 
@@ -20,12 +29,7 @@ firstName.addEventListener ("input", (event) => {
   }
 });
 
-firstName.addEventListener ("focus", (event) => {
-  if (!firstName.validity.valid) {
-    firstName.className = "name error";
-  }
-});
-
+  // when tabbed out or clicked on another input field
 firstName.addEventListener ("blur", (event) => {
   if (!firstName.validity.valid) {
     firstNameError.className = "error active"
