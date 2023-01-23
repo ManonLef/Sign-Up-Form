@@ -33,19 +33,45 @@ firstName.addEventListener ("blur", (event) => {
   }
 });
 
-
-email.addEventListener("blur", (event) => {
-  console.log(event);
-
-  if (email.validity.valid) {
-    emailError.textContent = "";
-    emailError.className = "error";
+//email validation
+email.addEventListener ("input", (event) => {
+  if (email.validity.valid && email.value.trim() !== "") {
+    emailError.className = "error" 
+    emailError.textContent ="awesome";
     email.className = "";
   } else {
-    showError();
-    event.preventDefault();
+    emailError.className = "error active"
+    emailError.textContent ="this field is required";
+    email.className = "name error";
   }
 });
+
+email.addEventListener ("focus", (event) => {
+  if (!email.validity.valid) {
+    email.className = "name error";
+  }
+});
+
+email.addEventListener ("blur", (event) => {
+  if (!email.validity.valid) {
+    emailError.className = "error active"
+    emailError.textContent ="this field is required";
+  }
+});
+
+
+// email.addEventListener("blur", (event) => {
+//   console.log(event);
+
+//   if (email.validity.valid) {
+//     emailError.textContent = "";
+//     emailError.className = "error";
+//     email.className = "";
+//   } else {
+//     showError();
+//     event.preventDefault();
+//   }
+// });
 
 form.addEventListener ("submit", (event) => {
   if (!email.validity.valid || !firstName.validity.valid) {
