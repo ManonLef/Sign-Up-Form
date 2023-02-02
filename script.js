@@ -86,13 +86,16 @@ pwdConfirm.addEventListener("blur", () => {
     pwdConfirmError.className = "invalid entry";
     pwdConfirm.className = "invalid entry";
     pwdConfirmError.textContent = "⚠ passwords don't match";
-  }
+  } 
 });
 
 pwdConfirm.addEventListener("input", () => {
   if (pwd.value === pwdConfirm.value) {
     pwdConfirm.className = "valid";
+    pwdConfirmError.className = "valid";
     pwdConfirmError.textContent = "it's a match!";
+  } else {
+    pwdConfirmError.textContent = "make sure your passwords match";
   }
 });
 
@@ -111,7 +114,7 @@ button.addEventListener("click", (event) => {
     pwd.className = "no-submit";
     event.preventDefault();
   }
-  if (pwd.value !== pwdConfirm.value || pwdConfirm === "") {
+  if (pwd.value !== pwdConfirm.value) {
     pwdConfirm.className = "no-submit";
     event.preventDefault();
   }
