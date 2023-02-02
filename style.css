@@ -169,8 +169,6 @@ span.valid{
   font-size: 0.8rem;
   position: relative;
   color: rgba(var(--color1));
-  margin-top: -0.2rem;
-  margin-bottom: -0.6rem;
 }
 
 span.invalid.entry {
@@ -183,4 +181,8 @@ span.invalid.entry {
   appearance: none;
   border: 2px solid var(--color3);
   outline: 2px;
+}
+
+.no-submit {
+  border: 2px solid var(--color3);
 }
