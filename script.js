@@ -8,10 +8,32 @@ const pwdError = document.querySelector ("#password + span.error")
 const pwdConfirm = document.getElementById ("confirm-pw")
 const pwdConfirmError = document.querySelector ("#confirm-pw + span.error")
 
-//PSEUDO CODE BEHAVIOUR
+// PSEUDO CODE VALIDATION BEHAVIOUR
   // Required fields are marked so I will not validate too aggressively; so not red during focus when no input is given yet.
   // Once the user leaves the field (blur) and entry invalid > add blur event error "blur error" with error message showing and prevent submit
   // Once entry is valid > "error class" removes red border
+
+// First Name Validation
+firstName.addEventListener ("blur", () => {
+  if (firstName.validity.valid && firstName.value.trim() !== "") {
+    firstNameError.className = "valid";
+  } else {
+    firstNameError.className = "invalid entry";
+    firstName.className = "invalid entry"
+    firstNameError.textContent = "⚠ this field is required";
+  }
+});
+
+// Mail Validation
+email.addEventListener ("blur", () => {
+  if (email.validity.valid) {
+    emailError.className = "valid";
+  } else {
+    emailError.className = "invalid entry";
+    email.className = "invalid entry";
+    emailError.textContent = "⚠ a valid email is required";
+  }
+});
 
 
 // //First Name Validation
