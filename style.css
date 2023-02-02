@@ -165,7 +165,8 @@ button:hover {
 }
 
 /* Validation  */
-span.valid{
+span.valid,
+span.info {
   font-size: 0.8rem;
   position: relative;
   color: rgba(var(--color1));
