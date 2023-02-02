@@ -7,7 +7,7 @@ const pwd = document.getElementById ("password");
 const pwdError = document.querySelector ("#password + span.error")
 const pwdConfirm = document.getElementById ("confirm-pw")
 const pwdConfirmError = document.querySelector ("#confirm-pw + span.error")
-
+const button = document.querySelector ("button")
 // PSEUDO CODE VALIDATION BEHAVIOUR
   // Required fields are marked so I will not validate too aggressively; so not red during focus when no input is given yet.
   // Once the user leaves the field (blur) and entry invalid > add blur event error "blur error" with error message showing and prevent submit
@@ -24,6 +24,14 @@ firstName.addEventListener ("blur", () => {
   }
 });
 
+firstName.addEventListener ("input", () => {
+  if (firstName.validity.valid && firstName.value.trim() !== "") {
+    firstNameError.className = "valid";
+    firstName.className = "";
+    firstNameError.textContent = "";
+  }
+})
+
 // Mail Validation
 email.addEventListener ("blur", () => {
   if (email.validity.valid) {
@@ -35,61 +43,25 @@ email.addEventListener ("blur", () => {
   }
 });
 
+email.addEventListener ("input", () => {
+  if (email.validity.valid) {
+    emailError.className = "valid";
+    email.className = "";
+    emailError.textContent = "";
+  }
+})
 
-// //First Name Validation
-//   //when clicked upon
-//   firstName.addEventListener ("focus", (event) => {
-//     if (!firstName.validity.valid) {
-//       firstName.className = "name error";
-//     }
-//   });
-
-//   //during input
-// firstName.addEventListener ("input", (event) => {
-//   if (firstName.validity.valid && firstName.value.trim() !== "") {
-//     firstNameError.className = "error" 
-//     firstNameError.textContent ="awesome";
-//     firstName.className = "";
-//   } else {
-//     firstNameError.className = "error active"
-//     firstNameError.textContent ="⚠ this field is required";
-//     firstName.className = "name error";
-//   }
-// });
-
-//   // when tabbed out or clicked on another input field
-// firstName.addEventListener ("blur", (event) => {
-//   if (!firstName.validity.valid) {
-//     firstNameError.className = "error active"
-//     firstNameError.textContent ="⚠ this field is required";
-//   }
-// });
-
-// //email validation
-// email.addEventListener ("input", (event) => {
-//   if (email.validity.valid && email.value.trim() !== "") {
-//     emailError.className = "error" 
-//     emailError.textContent ="awesome";
-//     email.className = "";
-//   } else {
-//     emailError.className = "error active"
-//     emailError.textContent ="⚠ this field is required";
-//     email.className = "name error";
-//   }
-// });
-
-// email.addEventListener ("focus", (event) => {
-//   if (!email.validity.valid) {
-//     email.className = "name error";
-//   }
-// });
-
-// email.addEventListener ("blur", (event) => {
-//   if (!email.validity.valid) {
-//     emailError.className = "error active"
-//     emailError.textContent ="⚠ this field is required";
-//   }
-// });
+// Prevent Submit when invalid fields exist
+button.addEventListener ("click", (event) => {
+  if (!email.validity.valid) {
+    email.className = "no-submit";
+    event.preventDefault();
+  }
+  if (!firstName.validity.valid || firstName.value.trim() === "") {
+    firstName.className = "no-submit";
+    event.preventDefault();
+  }
+})
 
 
 // // email.addEventListener("blur", (event) => {
@@ -112,12 +84,3 @@ email.addEventListener ("blur", () => {
 //   }
 // })
 
-// function showError() {
-//   if (email.validity.typeMismatch) {
-//     emailError.className = "error active";
-//     emailError.textContent = "⚠ Please enter a valid email adress";
-//   } else {
-//   emailError.className = "error active";
-//   emailError.textContent = "⚠ this field is required";
-//   }
-// };
