@@ -34,26 +34,47 @@ firstName.addEventListener ("input", () => {
 
 // Mail Validation
 email.addEventListener ("blur", () => {
-  if (email.validity.valid) {
+  // if (email.validity.valid) {
+  //   emailError.className = "valid";
+  // } else {
+  //   emailError.className = "invalid entry";
+  //   email.className = "invalid entry";
+  //   emailError.textContent = "⚠ a valid email is required";
+  // }
+  const userMail = email.value
+  if (validateEmail(userMail) === true) {
     emailError.className = "valid";
   } else {
-    emailError.className = "invalid entry";
-    email.className = "invalid entry";
-    emailError.textContent = "⚠ a valid email is required";
-  }
+       emailError.className = "invalid entry";
+       email.className = "invalid entry";
+       emailError.textContent = "⚠ a valid email is required";
+    };
+
 });
 
 email.addEventListener ("input", () => {
-  if (email.validity.valid) {
+  // if (email.validity.valid) {
+  //   emailError.className = "valid";
+  //   email.className = "";
+  //   emailError.textContent = "";
+  // }
+  const userMail = email.value
+  if (validateEmail(userMail) === true) {
     emailError.className = "valid";
     email.className = "";
     emailError.textContent = "";
   }
 });
 
+function validateEmail(email) {
+  const regexExp = /^([A-Za-z0-9_\-.+])+@([A-Za-z0-9_\-.])+\.([A-Za-z]{2,})$/;
+  return regexExp.test(email);
+}
+
 // Prevent Submit when invalid fields exist
 button.addEventListener ("click", (event) => {
-  if (!email.validity.valid) {
+  const userMail = email.value
+  if (validateEmail(userMail) === false) {
     email.className = "no-submit";
     event.preventDefault();
   }
