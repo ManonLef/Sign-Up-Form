@@ -5,9 +5,9 @@
 - [x] Sketch elements on page for flex layout
 
 - [ ] Add a README.MD
-- [ ] Visual indicator invalid entry
+- [x] Visual indicator invalid entry
 - [ ] JS password check
-- [ ] Edit pop ups for required fields and formats
+- [x] Edit pop ups for required fields and formats
 - [ ] Look into autocomplete yellow background in safari behavior
  
 ## 2022110601
@@ -31,4 +31,7 @@
 - I'm making a start to add an error color on the required fields today until they're filled out correctly.
 - Took some fiddling to validate during input since it also okayed blank spaces. I added a check by trimming and checking if the value wasn't empty after trim. 
 - [ ] consider regex for first name validity check special symbols/characters
-- [ ] check twitter thread on validation best pratices.
+- [x] check twitter thread on validation best pratices.
+
+## 2023020201
+- Pseudocode the desired validation and comment out current code to rewrite

@@ -30,7 +30,7 @@ firstName.addEventListener ("input", () => {
     firstName.className = "";
     firstNameError.textContent = "";
   }
-})
+});
 
 // Mail Validation
 email.addEventListener ("blur", () => {
@@ -49,7 +49,7 @@ email.addEventListener ("input", () => {
     email.className = "";
     emailError.textContent = "";
   }
-})
+});
 
 // Prevent Submit when invalid fields exist
 button.addEventListener ("click", (event) => {
@@ -61,26 +61,4 @@ button.addEventListener ("click", (event) => {
     firstName.className = "no-submit";
     event.preventDefault();
   }
-})
-
-
-// // email.addEventListener("blur", (event) => {
-// //   console.log(event);
-
-// //   if (email.validity.valid) {
-// //     emailError.textContent = "";
-// //     emailError.className = "error";
-// //     email.className = "";
-// //   } else {
-// //     showError();
-// //     event.preventDefault();
-// //   }
-// // });
-
-// form.addEventListener ("submit", (event) => {
-//   if (!email.validity.valid || !firstName.validity.valid) {
-//     showError();
-//     event.preventDefault();
-//   }
-// })
-
+});
