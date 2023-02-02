@@ -24,7 +24,7 @@ firstName.addEventListener ("input", (event) => {
     firstName.className = "";
   } else {
     firstNameError.className = "error active"
-    firstNameError.textContent ="this field is required";
+    firstNameError.textContent ="⚠ this field is required";
     firstName.className = "name error";
   }
 });
@@ -33,7 +33,7 @@ firstName.addEventListener ("input", (event) => {
 firstName.addEventListener ("blur", (event) => {
   if (!firstName.validity.valid) {
     firstNameError.className = "error active"
-    firstNameError.textContent ="this field is required";
+    firstNameError.textContent ="⚠ this field is required";
   }
 });
 
@@ -45,7 +45,7 @@ email.addEventListener ("input", (event) => {
     email.className = "";
   } else {
     emailError.className = "error active"
-    emailError.textContent ="this field is required";
+    emailError.textContent ="⚠ this field is required";
     email.className = "name error";
   }
 });
@@ -59,7 +59,7 @@ email.addEventListener ("focus", (event) => {
 email.addEventListener ("blur", (event) => {
   if (!email.validity.valid) {
     emailError.className = "error active"
-    emailError.textContent ="this field is required";
+    emailError.textContent ="⚠ this field is required";
   }
 });
 
@@ -87,9 +87,9 @@ form.addEventListener ("submit", (event) => {
 function showError() {
   if (email.validity.typeMismatch) {
     emailError.className = "error active";
-    emailError.textContent = "Please enter a valid email adress";
+    emailError.textContent = "⚠ Please enter a valid email adress";
   } else {
   emailError.className = "error active";
-  emailError.textContent = "this field is required";
+  emailError.textContent = "⚠ this field is required";
   }
 };
