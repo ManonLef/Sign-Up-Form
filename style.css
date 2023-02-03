@@ -164,6 +164,12 @@ button:hover {
   background-color: rgba(var(--color2));
 }
 
+button:focus,
+a:focus {
+  outline: 2px solid rgba(var(--color2));
+  border-radius: 2px;
+}
+
 /* Validation  */
 span.valid,
 span.info {
