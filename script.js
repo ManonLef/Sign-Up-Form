@@ -8,10 +8,6 @@ const pwdError = document.querySelector("#password + span.error");
 const pwdConfirm = document.getElementById("confirm-pw");
 const pwdConfirmError = document.querySelector("#confirm-pw + span.error");
 const button = document.querySelector("button");
-// PSEUDO CODE VALIDATION BEHAVIOUR
-// Required fields are marked so I will not validate too aggressively; so not red during focus when no input is given yet.
-// Once the user leaves the field (blur) and entry invalid > add blur event error "blur error" with error message showing and prevent submit
-// Once entry is valid > "error class" removes red border
 
 // First Name Validation
 firstName.addEventListener("blur", () => {
