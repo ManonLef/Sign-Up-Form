@@ -4,9 +4,9 @@
 
 - [x] Sketch elements on page for flex layout
 
-- [ ] Add a README.MD
+- [x] Add a README.MD
 - [x] Visual indicator invalid entry
-- [ ] JS password check
+- [x] JS password check
 - [x] Edit pop ups for required fields and formats
 - [ ] Look into autocomplete yellow background in safari behavior
  
