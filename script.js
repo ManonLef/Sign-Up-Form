@@ -28,7 +28,7 @@ firstName.addEventListener("input", () => {
   if (firstName.validity.valid && firstName.value.trim() !== "") {
     firstNameError.className = "valid";
     firstName.className = "";
-    firstNameError.textContent = "";
+    firstNameError.textContent = "✓";
   }
 });
 
@@ -49,7 +49,7 @@ email.addEventListener("input", () => {
   if (validateEmail(userMail) === true) {
     emailError.className = "valid";
     email.className = "";
-    emailError.textContent = "";
+    emailError.textContent = "✓";
   }
 });
 
@@ -65,7 +65,7 @@ pwd.addEventListener("input", () => {
   if (pwd.validity.valid) {
     pwdError.className = "valid";
     pwd.className = "valid";
-    pwdError.textContent = "";
+    pwdError.textContent = "✓";
   }
 });
 
@@ -75,7 +75,7 @@ pwd.addEventListener("blur", () => {
     pwd.className = "invalid entry";
     pwdError.textContent = "⚠ password should at least be 8 characters";
   } else {
-    pwdError.textContent = "";
+    pwdError.textContent = "✓";
     pwdError.className = "valid";
   }
 });
@@ -93,9 +93,10 @@ pwdConfirm.addEventListener("input", () => {
   if (pwd.value === pwdConfirm.value) {
     pwdConfirm.className = "valid";
     pwdConfirmError.className = "valid";
-    pwdConfirmError.textContent = "it's a match!";
+    pwdConfirmError.textContent = "✓ it's a match!";
   } else {
-    pwdConfirmError.textContent = "make sure your passwords match";
+    pwdConfirmError.className = "invalid entry";
+    pwdConfirmError.textContent = "⚠ make sure your passwords match";
   }
 });
 
